@@ -20,7 +20,7 @@ int main (int argc, char* argv[]) {
             continue;
         }
         if (arg == "-l") {
-            
+            mf.addFlag (arg);
             continue;
         }
         task = argv[i];

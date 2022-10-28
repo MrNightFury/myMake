@@ -5,7 +5,6 @@
 using namespace std;
 
 struct Task {
-    int id;
     string name;
     vector<string> commands;
     vector<int> from;
@@ -16,8 +15,6 @@ string to_string (Task task);
 
 class Graph {
     vector<Task*> tasks;
-    vector<string> names;
-    vector<vector<string>> commands;
     vector<vector<int>> from;
     vector<vector<int>> to;
 
@@ -28,9 +25,7 @@ class Graph {
         int getIndex (string name);
         void show ();
         void addCommand (string name, string command);
-        //void delTask (string name);
         bool isEmpty();
-        //vector<Task> getReadyTasks();
         vector<string> getCommands (string name);
 
         Task* getTask (int id);
