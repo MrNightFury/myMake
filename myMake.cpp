@@ -25,10 +25,8 @@ int main (int argc, char* argv[]) {
         }
         task = argv[i];
     }
-    //cout << "File: \"" + fileName + "\"\nTask: \"" + task + "\"\n";
     mf.loadFile (fileName);
     mf.log ("Task: \"" + task + '\"');
-    // mf.show();
     mf.loadHash();
     mf.make(task);
     mf.saveHash();

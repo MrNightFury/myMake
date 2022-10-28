@@ -40,7 +40,6 @@ void Graph::addLine (string task, string subtask) {
     to[subtaskI].push_back(taskI);
 }
 
-//upd
 bool Graph::isExist (string name) {
     for (int i = 0; i < tasks.size(); i++) {
         if (tasks[i]->name == name) {
@@ -50,7 +49,6 @@ bool Graph::isExist (string name) {
     return false;
 }
 
-//upd
 int Graph::getIndex (string name) {
     if (name == "_first_task_signal_") {
         return 0;
@@ -63,7 +61,6 @@ int Graph::getIndex (string name) {
     return -1;
 }
 
-//upd
 void Graph::show() {
     for (int i = 0; i < tasks.size(); i++) {
         cout << '*' << tasks[i]->name << "*\n";
@@ -78,7 +75,6 @@ void Graph::show() {
     }
 }
 
-//upd
 void Graph::addCommand (string name, string command) {
     int index = getIndex (name);
     if (index != -1) {
@@ -88,17 +84,14 @@ void Graph::addCommand (string name, string command) {
     }
 }
 
-//upd
 bool Graph::isEmpty() {
     return tasks.empty();
 }
 
-//upd
 vector<string> Graph::getCommands (string name) {
     return tasks[getIndex(name)]->commands;
 }
 
-//upd
 Task* Graph::getTask (int id) {
     return (id != -1 ? tasks[id] : nullptr);
 }
