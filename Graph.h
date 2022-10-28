@@ -1,5 +1,5 @@
 #ifndef __GRAPH_H
-#define __GRAPG_H
+#define __GRAPH_H
 #include <vector>
 #include <string>
 using namespace std;
@@ -15,7 +15,6 @@ string to_string (Task task);
 
 class Graph {
     vector<Task*> tasks;
-    vector<vector<int>> from;
     vector<vector<int>> to;
 
     public:

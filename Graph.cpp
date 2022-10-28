@@ -17,8 +17,7 @@ string to_string (Task task) {
 void Graph::addTask (string name) {
     if (!isExist(name)) {
         tasks.push_back (new Task {name, vector<string>(), vector<int>(), vector<int>(), vector<string>()});
-        //Outdated
-        from.push_back (vector<int>());
+        //Outdated, but somehow it doesn't work without it
         to.push_back (vector<int>());
     }
 }
@@ -38,7 +37,6 @@ void Graph::addLine (string task, string subtask) {
     tasks[subtaskI]->to.push_back(taskI);
     tasks[taskI]->lastHashes.push_back ("-");
     //outd
-    // from[taskI].push_back(subtaskI);
     to[subtaskI].push_back(taskI);
 }
 
